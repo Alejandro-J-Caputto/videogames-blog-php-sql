@@ -1,1 +1,5 @@
-![image of schema](assets/img/cubes.png)
+# Easy Videogames Blog
+
+**Table Overview**
+
+![image of schema](assets/img/table-overview.png)
