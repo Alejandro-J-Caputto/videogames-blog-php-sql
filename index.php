@@ -39,14 +39,17 @@
                    <div class="tarjeta_foto">
                        <img class="tarjeta_foto-avatar" src="./assets/img/gta-v.jpg" alt="">
                     </div>
+
                    <div class="tarjeta_texto">
                        <h3 class="tarjeta_titulo">GTA V</h3>
                        
                        <p class="tarjeta_description">
-                           Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam accusantium iusto ad unde sint natus, molestiae modi reprehenderit qui debitis dolores error, nihil sit repudiandae velit eligendi quam fugiat fuga?
                        </p>
                    </div>
-               </li>
+                </li>
+                <div class="clearfix"></div>
+
                <li class="tarjeta">
                    <div class="tarjeta_foto">
                        <img class="tarjeta_foto-avatar" src="./assets/img/assassins-creed-valhalla-imagen.jpeg" alt="">

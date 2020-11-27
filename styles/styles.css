@@ -92,7 +92,7 @@ header {
 
 .main-body {
     margin: 0 auto;
-    width: 1140px;
+    /* width: 1140px; */
     background-color: blueviolet;
     min-height: 100vh;
     box-shadow: 1px 1px 5px black;
@@ -173,8 +173,9 @@ nav {
     min-height: 70vh;
     width: 70%;
     margin-left: 2rem;
-    float: left;
+    /* float: left; */
     display: inline-block;
+    position: relative;
 
 }
 
@@ -204,22 +205,24 @@ nav {
     color: #f7f7f7;
     border-radius: 10px;
     cursor: pointer;
+    position: relative;
 
 }
 
 .tarjeta_foto {
     height: 300px;
-   
+    width: auto;
     display: inline-block;
     float: left;
     width: 200px;
-    position: relative;
+
     overflow: hidden;
 }
 .tarjeta_foto-avatar {
     height: 290px;
     max-width: 200px;   
     margin-top: 2px;
+    /* float: left; */
     margin-left: 3px;
     border-radius: 10px;
     padding: 5px;
@@ -227,8 +230,14 @@ nav {
 }
 .tarjeta_texto {
     display: inline-block;
+    height: 300px;
+    float: left;
+    max-width: 70%;
+    overflow: hidden;
+    padding-left: 3rem;
+    /* padding-left: 3rem;
     margin-left: 3rem;
-    margin-top: 3rem;
+    margin-top: 3rem; */
 }
 .tarjeta_titulo {
 
@@ -272,7 +281,13 @@ button[type='submit'] {
   border: 1px solid #ccc;
   transition: background-color 0.2s, color 0.2s;
 }
-
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+  }
 .btn-view:hover,
 .btn-view-active,
 button[type='submit']:hover,
@@ -309,3 +324,103 @@ padding: 10px 30px;
     text-align: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.007),rgba(0, 0, 0, 0.116), rgba(0, 0, 0, 0.7));
 }
+
+
+@media only screen and (max-width: 1023px) {
+
+    .tarjeta {
+        height: 500px;
+        width: 300px;
+
+        overflow: hidden;
+
+    }
+    .tarjeta_foto {
+        /* display: block; */
+        width: 290px;
+        height: 250px;
+        margin: 5px auto;
+    }
+    .tarjeta_foto-avatar {
+        width: 250px;
+        background-size: cover;
+        height: 250px;
+        margin:0 auto;
+        max-width: none;
+        padding: 2px;
+        border-radius: 50%;
+        float: none;
+        display: block;
+    }
+    /* .tarjeta_foto-avatar {
+        height: 290px;
+        max-width: 200px;   
+        margin-top: 2px;
+        float: left;
+        margin-left: 3px;
+        border-radius: 10px;
+        padding: 5px;
+    
+    } */
+    .tarjeta_texto {
+        max-width: none;
+        padding-left: 0;
+    }
+    .tarjeta_titulo {
+        text-align: center;
+    }
+    .tarjeta_description {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    #section-entradas {
+
+        min-height: 70vh;
+        width: 300px;
+        margin-left: 1rem;
+        /* float: left; */
+        display: inline-block;
+        position: relative;
+    
+    }
+    
+    body {
+        font-family: lato, sans-serif;
+        color: #555;
+        font-weight: 300;
+        font-size: 1.6rem;
+        line-height: 1.7;
+    
+        box-sizing: border-box;
+    
+        padding: 3rem;
+        text-rendering: optimizeLegibility;
+        background-color: blueviolet;
+    
+    }
+    .mi-nav {
+        display: none;
+    }
+    .main-body {
+        margin: 0 auto;
+        /* width: 1140px; */
+        background-color: blueviolet;
+        min-height: 100vh;
+        box-shadow: none;
+        border-radius: 3px;
+        border: none;
+    
+    }
+    #section-login {
+        padding-top: 0rem;
+        display: block;
+        color: #f7f7f7;
+        float: none;
+        background-color: rgba(158, 86, 226, 0.822);
+        width: auto;
+        box-shadow: 1px 1px 3px black;
+        border-radius: 3px;
+    }
+  
+  
+  }
