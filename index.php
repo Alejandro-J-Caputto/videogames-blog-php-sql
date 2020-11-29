@@ -7,7 +7,7 @@
     
     <?php require_once './includes/login-register.php'; ?>  
         <!-- footer -->
-    <?php require_once './includes/footer.php' ?>
+    <?php require_once './includes/footer.php'; ?>
        
     
  
