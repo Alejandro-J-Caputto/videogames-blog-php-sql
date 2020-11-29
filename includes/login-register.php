@@ -1,6 +1,17 @@
 <?php require_once './includes/helpers/features.php' ?>
-<section id="section-login">
-<aside id="sidebar">   
+<section class="section-login">
+<aside id="sidebar">  
+    <?php if(isset($_SESSION['usuario'])): ?>   
+
+        <div id="user-logged" class="">
+            <h3 class="user-name">Welcome <?=$_SESSION['usuario']['nombre']?></h3>
+            <button class="btn" type="submit" value="Salir">Log Out</button>
+
+        </div>
+        <?php $isLogged = true ?>
+    <?php endif; ?>
+
+    <?php if(!$isLogged) : ?>
     <div id="login" class="block-aside">
 
 
@@ -13,7 +24,6 @@
             <button class="btn" type="submit" value="Entrar">Log In</button>
         </form>
     </div>
-
     <div id="register" class="block-aside">
         <h3>Registrate</h3>
         <?php 
@@ -50,6 +60,7 @@
         </form>
         <?php deleteError(); ?>
     </div>
+    <?php endif; ?>
 </aside>
 
 </section>

@@ -181,7 +181,7 @@ nav {
 
 
 /* FORMULARIO REGISTRO */
-#section-login {
+.section-login {
     padding-top: 2rem;
     display: inline-block;
     color: #f7f7f7;
@@ -250,15 +250,15 @@ nav {
  
 }
 
-#section-login {
+.section-login {
     text-align: center;
 }
-#section-login form label {
+.section-login form label {
     display: block;
     text-align: left;
     padding-left: 3rem;
 }
-#section-login form input {
+.section-login form input {
     display: block;
     margin: 0 auto;
     width: 80%;
@@ -435,7 +435,7 @@ padding: 10px 30px;
         border: none;
     
     }
-    #section-login {
+    .section-login {
         margin-top: 2rem;
         padding-top: 2rem;
         display: block;
@@ -447,17 +447,17 @@ padding: 10px 30px;
         border-radius: 3px;
     }
 
-    #section-login {
+    .section-login {
         text-align: center;
         height: 500px;
         width: 300px;
     }
-    #section-login form label {
+    .section-login form label {
         display: block;
         text-align: left;
         padding-left: 3rem;
     }
-    #section-login form input {
+    .section-login form input {
         display: block;
         margin: 0 auto;
         width: 80%;

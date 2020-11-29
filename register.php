@@ -9,7 +9,7 @@ if (isset($_POST)) {
     }
     $name =      isset($_POST['name']) ? mysqli_real_escape_string($db, $_POST['name']) : null;
     $apellidos = isset($_POST['apellidos']) ? mysqli_real_escape_string($db, $_POST['apellidos']) : null;
-    $email =     isset($_POST['email']) ? mysqli_real_escape_string($db, $_POST['email']) : null;
+    $email =     isset($_POST['email']) ? mysqli_real_escape_string($db, trim($_POST['email'])) : null;
     $password =  isset($_POST['password']) ? mysqli_real_escape_string($db, $_POST['password']) : null;
 
     $errores = array();
