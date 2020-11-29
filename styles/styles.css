@@ -351,6 +351,8 @@ padding: 10px 30px;
         border-radius: 50%;
         float: none;
         display: block;
+        border: 2px solid #f7f7f7;
+
     }
     /* .tarjeta_foto-avatar {
         height: 290px;
