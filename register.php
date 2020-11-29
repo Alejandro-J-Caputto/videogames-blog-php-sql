@@ -3,11 +3,14 @@ if (isset($_POST)) {
     //CONEXION CON LA BASE DE DATOS
     require_once './includes/connect.php';
     //
-    session_start();
-    $name =      isset($_POST['name']) ? $_POST['name'] : null;
-    $apellidos = isset($_POST['apellidos']) ? $_POST['apellidos'] : null;
-    $email =     isset($_POST['email']) ? $_POST['email'] : null;
-    $password =  isset($_POST['password']) ? $_POST['password'] : null;
+    if(!isset($_SESSION)) {
+        session_start();
+
+    }
+    $name =      isset($_POST['name']) ? mysqli_real_escape_string($db, $_POST['name']) : null;
+    $apellidos = isset($_POST['apellidos']) ? mysqli_real_escape_string($db, $_POST['apellidos']) : null;
+    $email =     isset($_POST['email']) ? mysqli_real_escape_string($db, $_POST['email']) : null;
+    $password =  isset($_POST['password']) ? mysqli_real_escape_string($db, $_POST['password']) : null;
 
     $errores = array();
 

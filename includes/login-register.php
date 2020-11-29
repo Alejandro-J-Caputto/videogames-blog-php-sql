@@ -2,6 +2,8 @@
 <section id="section-login">
 <aside id="sidebar">   
     <div id="login" class="block-aside">
+
+
         <h3>Identificate</h3>
         <form action="login.php" method="post">
             <label for="email">Email</label>
@@ -16,7 +18,7 @@
         <h3>Registrate</h3>
         <?php 
           if(isset($_SESSION['success'])) :?>
-          <div class='success'>
+          <div class='alert'>
             <?= $_SESSION['success'] ?>
           </div>
           
