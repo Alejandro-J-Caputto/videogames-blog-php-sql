@@ -1,15 +1,33 @@
-<?php require_once './includes/helpers/features.php' ?>
 <section class="section-login">
 <aside id="sidebar">  
     <?php if(isset($_SESSION['usuario'])): ?>   
 
         <div id="user-logged" class="">
             <h3 class="user-name">Welcome <?=$_SESSION['usuario']['nombre']?></h3>
-            <button class="btn" type="submit" value="Salir">Log Out</button>
+            <?php $isLogged = true ?>
+            <button class="btn-logout bt" type="text" href="./logout.php" value="Salir">
+            <a href="./logout.php">LogOut</a>
+        </button>
+        <button class="btn-profile bt" type="text" href="./profile.php" value="Perfil">
+        <a href="./logout.php">Perfil</a>
+    </button>
+        </button>
+        <button class="btn-profile bt" type="text" href="./category.php" value="Category">
+        <a href="./logout.php">Categoria</a>
+    </button>
+    <button class="btn-addNew bt" type="text" href="./newAdd.php" value="Add">
+    <a href="./logout.php">Agregar</a>
+    </button>   
 
+           
         </div>
-        <?php $isLogged = true ?>
-    <?php endif; ?>
+    <?php else : ?>
+        <?php if(isset($_SESSION['error-login'])) :?>
+        <div class="alert alert-error">
+            <h3><?=$_SESSION['error-login']?></h3>
+        </div>
+        <?php endif ?>
+    <?php endif ?>    
 
     <?php if(!$isLogged) : ?>
     <div id="login" class="block-aside">

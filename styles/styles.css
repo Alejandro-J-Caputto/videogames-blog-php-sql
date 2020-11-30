@@ -80,6 +80,7 @@ header {
   border-bottom: 2px solid transparent;
   color: #777;
   font-size: 2rem;
+
   transition: border-bottom 1s;
 }
 .main-nav li a:hover, 
@@ -142,9 +143,12 @@ nav {
 .mi-nav li {
     display: inline-block;
     margin-left: 40px;
+    
 }
 .mi-nav li a:link,
 .mi-nav li a:visited {
+  text-transform: uppercase;
+
     padding: 8px 0px;
     color: #f7f7f7;
     font-size: 2rem;
@@ -154,6 +158,8 @@ nav {
 
 .mi-nav li a:hover,
 .mi-nav li a:active {
+  text-transform: uppercase;
+
     border-bottom: 2px solid #f7f7f7;
     transition: border-bottom 1s;
 }
@@ -266,12 +272,13 @@ nav {
     border: 1px solid #ccc;
     height: 3rem;
 }
-button {
+button, .btn-logout {
     margin-top: 2rem;
     margin-bottom: 2rem;
     cursor: pointer;
 }
-button[type='submit'] {
+button[type='submit'],
+button [type = 'text'] {
   display: inline-block;
   padding: 10px 30px;
   font-weight: 300;
@@ -290,13 +297,27 @@ button[type='submit'] {
     visibility: hidden;
   }
 .btn-view:hover,
+.btn-logout:hover,
 .btn-view-active,
+.btn-logout-active,
+.btn-profile:active,
+.btn-profile:hover,
+.btn-addNew:hover,
+.btn-addNew:active,
+
 button[type='submit']:hover,
-button[type='submit']:active {
+button[type='submit']:active,
+button[type='text']:hover,
+button[type='text']:active {
   background-color: blueviolet;
 }
 button a {
     color: #f7f7f7;
+}
+.bt {
+ width: 150px;
+ padding-top: 10px;
+ margin-bottom: 10px;
 }
 .see-all {
     min-width: 300px;
@@ -304,7 +325,7 @@ button a {
     align-items: center;
     text-align: center;
 }
-.btn-view {
+.btn-view, .btn-logout, .btn-profile, .btn-addNew {
     display: block;
     margin: 0 auto;
 padding: 10px 30px;
@@ -315,8 +336,11 @@ padding: 10px 30px;
     color: white;
     border: 1px solid #ccc;
     transition: background-color 0.2s, color 0.2s;
+    margin-bottom: 5px;
+    margin-top: 5px;
 
 }
+
 
 #myFooter {
     padding-top: 8rem;

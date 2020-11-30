@@ -1,4 +1,5 @@
 <?php require_once 'connect.php'; ?>
+<?php require_once './includes/helpers/features.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,12 +15,17 @@
         <nav>
             <div class="nav-brand">
             <a href="#"><i class="nav-brand_logo fas fa-gamepad"></i></a>  
-            </div>
-            <ul class="mi-nav">
-                <li> <a href="#">Categoria 1</a> </li>
-                <li> <a href="#">Categoria 2</a> </li>
-                <li> <a href="#">Categoria 3</a> </li>
-                <li> <a href="#">Categoria 4</a> </li>
+            </div> 
+            <ul class="mi-nav" style="text-transform: uppercase;">
+                <?php
+                    $categories = getCategories($db);
+                    while($categorie = mysqli_fetch_assoc($categories)): 
+                ?>
+                <li>
+                     <a href="newCategorie.php?id=<?=$categorie['id']?>"><?=$categorie['nombre']?></a> 
+                </li>
+                
+                <?php endwhile; ?>
                 <li> <a href="#">Sobre mi</a></li>
                 <li> <a href="#">Contacto</a> </li>
             </ul>

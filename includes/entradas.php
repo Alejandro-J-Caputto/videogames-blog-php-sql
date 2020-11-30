@@ -1,5 +1,12 @@
+
+
+
 <h1 class="header-1">Recently Added</h1>
+
+
+
 <section id="section-entradas">
+
 <ul class="entradas">
 <li class="tarjeta">
     <div class="tarjeta_foto">
@@ -14,6 +21,7 @@
         </p>
     </div>
 </li>
+
 <div class="clearfix"></div>
 
 <li class="tarjeta">

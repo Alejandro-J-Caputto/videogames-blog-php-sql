@@ -1,4 +1,5 @@
 <?php
+
 function showError ($errores, $field) {
     $alerta = '';
     if (isset($errores[$field]) && !empty($field)){
@@ -19,6 +20,24 @@ function deleteError (){
     }
     return $deleted;
 }
+
+//CRUD 
+
+
+function getCategories ($db) {
+    $sql = "select * from categorias order by id asc";
+
+    $categorias = mysqli_query($db, $sql);
+
+    $result = array();
+    if($categorias && mysqli_num_rows($categorias) >= 1) {
+        $result = $categorias;
+    } 
+    return $result;
+}
+
+
+
 ?>
     
 
