@@ -20,4 +20,4 @@ insert into entradas values
 "FIFA 21 es un videojuego de simulación de fútbol del año 2020 disponible para Microsoft Windows, PlayStation 4, Xbox One y Nintendo Switch el 9 de octubre de 2020, y aparte es el primer videojuego de la serie FIFA para Google Stadia, PlayStation 5 y Xbox Series X|S.",
  curdate());
 
- 
+ "select usuarios.nombre, categorias.nombre, entradas.id, entradas.descripcion, entradas.titulo, entradas.fecha from entradas inner join usuarios on usuarios.id = entradas.usuario_id  inner join categorias on categorias.id = entradas.categoria_id";

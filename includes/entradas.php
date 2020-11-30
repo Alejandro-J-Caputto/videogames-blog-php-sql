@@ -1,6 +1,7 @@
 
 
 
+
 <h1 class="header-1">Recently Added</h1>
 
 
@@ -36,29 +37,40 @@
         </p>
     </div>
 </li>
-<li class="tarjeta">
+
+<?php $entries = getEntries($db); 
+
+if(!empty($entries)):
+while($entrie = mysqli_fetch_assoc($entries)) :
+?>
+ <li class="tarjeta" data-id="<?=$entrie['id']?>">
     <div class="tarjeta_foto">
         <img class="tarjeta_foto-avatar" src="./assets/img/cubes.png" alt="">
     </div>
     <div class="tarjeta_texto">
-        <h3 class="tarjeta_titulo">GTA V</h3>
-        
+        <h3 class="tarjeta_titulo"><?=$entrie['titulo'] ?>    </h3>
+        <span class="tarjeta_genero">
+            Gendre: <?= $entrie['genero'] ?>
+        </span>
         <p class="tarjeta_description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <?= substr($entrie['descripcion'], 0, 180)."..." ?>
         </p>
+        <p class="tarjeta_autor">
+        <span><strong> Author: </strong> <?= $entrie['nombre usuario']?></span>
+        </p>
+        <p class="tarjeta_date">
+            <strong>Created at:</strong>  <?= $entrie['fecha'] ?>
+        </p>
+    
+
     </div>
 </li>
-<li class="tarjeta">
-    <div class="tarjeta_foto">
-        <img class="tarjeta_foto-avatar" src="./assets/img/cubes.png" alt="">
-    </div>
-    <div class="tarjeta_texto">
-        <h3 class="tarjeta_titulo">GTA V</h3>
-        
-        <p class="tarjeta_description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </p>
-    </div>
+
+<?php 
+    endwhile;
+    endif;
+?>
+
 </li>
 </ul>
 <div id="see-all">

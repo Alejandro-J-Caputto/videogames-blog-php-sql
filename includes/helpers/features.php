@@ -37,6 +37,24 @@ function getCategories ($db) {
 }
 
 
+//ENTRADAS
+
+function getEntries ($db) {
+    $sql =  "select usuarios.nombre as 'nombre usuario', categorias.nombre as 'genero', entradas.id, entradas.descripcion, entradas.titulo, entradas.fecha from entradas inner join usuarios on usuarios.id = entradas.usuario_id inner join categorias on categorias.id = entradas.categoria_id";
+
+    $entries = mysqli_query($db, $sql);
+
+    $result = array();
+    if($entries && mysqli_num_rows($entries) >= 1){
+        $result = $entries;
+
+    } else {
+        $result = mysqli_error($sql);
+    }
+
+    return $result;
+}
+
 
 ?>
     

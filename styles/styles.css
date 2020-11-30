@@ -372,6 +372,15 @@ padding: 10px 30px;
 }
 
 
+.tarjeta_autor, .tarjeta_date {
+    margin-right: 4px;
+    text-align: end;
+    float: right;
+    display: inline-block;
+    vertical-align: text-bottom;
+
+}
+
 @media only screen and (max-width: 1023px) {
 
     .tarjeta {

@@ -19,13 +19,17 @@
             <ul class="mi-nav" style="text-transform: uppercase;">
                 <?php
                     $categories = getCategories($db);
+                    if(!empty($categories)):
                     while($categorie = mysqli_fetch_assoc($categories)): 
                 ?>
                 <li>
                      <a href="newCategorie.php?id=<?=$categorie['id']?>"><?=$categorie['nombre']?></a> 
                 </li>
                 
-                <?php endwhile; ?>
+                <?php 
+                    endwhile;   
+                    endif;
+                ?>
                 <li> <a href="#">Sobre mi</a></li>
                 <li> <a href="#">Contacto</a> </li>
             </ul>
