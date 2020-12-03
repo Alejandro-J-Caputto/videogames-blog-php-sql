@@ -184,6 +184,9 @@ nav {
     position: relative;
 
 }
+.crear-entrada {
+    color: #f7f7f7;
+}
 
 
 /* FORMULARIO REGISTRO */
@@ -440,6 +443,8 @@ padding: 10px 30px;
         position: relative;
     
     }
+
+   
     
     body {
         font-family: lato, sans-serif;

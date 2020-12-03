@@ -2,21 +2,21 @@
 <aside id="sidebar">  
     <?php if(isset($_SESSION['usuario'])): ?>   
 
-        <div id="user-logged" class="">
-            <h3 class="user-name">Welcome <?=$_SESSION['usuario']['nombre']?></h3>
-            <?php $isLogged = true ?>
-            <button class="btn-logout bt" type="text" href="./logout.php" value="Salir">
+    <div id="user-logged" class="">
+        <h3 class="user-name">Welcome <?=$_SESSION['usuario']['nombre']?></h3>
+    <?php $isLogged = true ?>
+        <button class="btn-logout bt" type="text" href="./logout.php" value="Salir">
             <a href="./logout.php">LogOut</a>
         </button>
         <button class="btn-profile bt" type="text" href="./profile.php" value="Perfil">
-        <a href="./logout.php">Perfil</a>
-    </button>
+            <a href="./logout.php">Perfil</a>
         </button>
+
         <button class="btn-profile bt" type="text" href="./category.php" value="Category">
-        <a href="./logout.php">Categoria</a>
-    </button>
+        <a href="./newCategorie.php">Categoria</a>
+        </button>
     <button class="btn-addNew bt" type="text" href="./newAdd.php" value="Add">
-    <a href="./logout.php">Agregar</a>
+    <a href="./newAdd.php">Agregar</a>
     </button>   
 
            
