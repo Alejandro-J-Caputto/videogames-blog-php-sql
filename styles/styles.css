@@ -262,10 +262,19 @@ nav {
 .section-login {
     text-align: center;
 }
+
 .add-categorie-form label[for='name'] {
     margin-left: 4rem;
     display: inline;
 }
+.add-entrie-form label,
+.add-entrie-form input,
+.add-entrie-form select,
+.add-entrie-form textarea {
+    display: block;
+}
+    
+
 .section-login form label {
     display: block;
     text-align: left;
@@ -280,7 +289,10 @@ nav {
     border: 1px solid #ccc;
     height: 3rem;
 }
+
+
 .section-login form input {
+    
     display: block;
     margin: 0 auto;
     width: 80%;

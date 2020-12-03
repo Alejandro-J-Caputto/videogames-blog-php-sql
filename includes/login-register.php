@@ -9,7 +9,7 @@
             <a href="./logout.php">LogOut</a>
         </button>
         <button class="btn-profile bt" type="text" href="./profile.php" value="Perfil">
-            <a href="./logout.php">Perfil</a>
+            <a href="./profile.php">Perfil</a>
         </button>
 
         <button class="btn-profile bt" type="text" href="./category.php" value="Category">

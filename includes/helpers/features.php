@@ -12,11 +12,17 @@ function deleteError (){
     $deleted = null;
     if(isset($_SESSION['errores'])){
         $_SESSION['errores'] = null;
-        $deleted = session_unset($_SESSION['errores']);
+        $deleted = true;
+    }
+    if(isset($_SESSION['errores_entrada'])){
+        $_SESSION['errores_entrada'] = null;
+        $deleted = true;
+
     }
     if(isset($_SESSION['success'])){
         $_SESSION['success'] = null;
-        session_unset($_SESSION['success']);
+        $deleted = true;
+
     }
     return $deleted;
 }
@@ -40,7 +46,7 @@ function getCategories ($db) {
 //ENTRADAS
 
 function getEntries ($db) {
-    $sql =  "select usuarios.nombre as 'nombre usuario', categorias.nombre as 'genero', entradas.id, entradas.descripcion, entradas.titulo, entradas.fecha from entradas inner join usuarios on usuarios.id = entradas.usuario_id inner join categorias on categorias.id = entradas.categoria_id";
+    $sql =  "select usuarios.nombre as 'nombre usuario', categorias.nombre as 'genero', entradas.id, entradas.descripcion, entradas.titulo, entradas.fecha from entradas inner join usuarios on usuarios.id = entradas.usuario_id inner join categorias on categorias.id = entradas.categoria_id order by fecha desc";
 
     $entries = mysqli_query($db, $sql);
 
